@@ -1,6 +1,7 @@
 package ru.gb.example3_sem4.controller;
 
 
+import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -9,13 +10,10 @@ import ru.gb.example3_sem4.model.User;
 import ru.gb.example3_sem4.repository.UserRepository;
 
 @Controller
+@AllArgsConstructor
 public class UserController {
     private final UserRepository userRepository;
 
-
-    public UserController(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
 
 
 
